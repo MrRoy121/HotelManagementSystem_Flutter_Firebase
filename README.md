@@ -1,16 +1,19 @@
-# hotels_syl
+# Hotel Management System
 
-A new Flutter project.
+## Overview
+A hotel management system with separate interfaces for users and admins. Admins can add rooms and set prices, while users can select rooms and proceed with bookings. This system includes a variety of features to manage hotel operations efficiently.
 
-## Getting Started
+## Features
 
-This project is a starting point for a Flutter application.
+### Admin Features
+- **Add Room:** Admins can add new rooms to the system.
+- **Set Price:** Admins can set or update the price for each room.
+- **Manage Bookings:** Admins can view and manage all bookings.
+- **View Reports:** Admins can generate and view reports of bookings and revenue.
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### User Features
+- **View Rooms:** Users can browse available rooms with their details and prices.
+- **Select Room:** Users can select a room based on their preference.
+- **Book Room:** Users can proceed with booking the selected room.
+- **Manage Bookings:** Users can view and manage their own bookings.
+- **User Profile:** Users can update their personal information.
