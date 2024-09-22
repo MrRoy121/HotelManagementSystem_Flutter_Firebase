@@ -101,7 +101,7 @@ class _BookingScreenState extends State<BookingScreen> {
     int fff = ((to.difference(from).inHours / 24).round() + 1);
     setState(() {
       fors = fff.toString();
-      total = (fff * int.parse(widget.price)).toString();
+      total = (fff * double.parse(widget.price)).toString();
     });
   }
 

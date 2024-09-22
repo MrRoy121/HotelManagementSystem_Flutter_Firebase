@@ -77,7 +77,7 @@ class _AdminLoginScreenState extends State<AdminLoginScreen> {
                       ),
                     ),
                     const SizedBox(
-                      height: 60,
+                      height: 40,
                     ),
                     Form(
                       child: Column(
@@ -85,7 +85,6 @@ class _AdminLoginScreenState extends State<AdminLoginScreen> {
                           Container(
                             padding:
                                 const EdgeInsets.symmetric(horizontal: 20.0),
-                            margin: const EdgeInsets.only(top: 10.0),
                             child: TextFormField(
                               controller: _conuserEmail,
                               style: TextStyle(color: AppColors.creamColor),
@@ -179,7 +178,7 @@ class _AdminLoginScreenState extends State<AdminLoginScreen> {
                 ],
               ),
               const SizedBox(
-                height: 20,
+                height: 10,
               ),
               CustomButton.customBtnLogin(
                 buttonName: 'Sign In',
@@ -190,7 +189,7 @@ class _AdminLoginScreenState extends State<AdminLoginScreen> {
                 textColor: AppColors.mirage,
               ),
               const SizedBox(
-                height: 20,
+                height: 10,
               ),
             ],
           ),
