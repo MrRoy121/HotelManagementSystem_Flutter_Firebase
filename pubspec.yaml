@@ -45,14 +45,14 @@ dependencies:
   concentric_transition: ^1.0.3
   shimmer: ^2.0.0
   salomon_bottom_bar: ^3.3.1
-  cached_network_image: ^3.2.3
-  dropdown_button2: ^1.7.2
+  cached_network_image: ^3.4.1
+  dropdown_button2: ^2.3.9
   flutter_rating_bar: ^4.0.1
   card_swiper: ^2.0.4
   url_launcher: ^6.1.5
   shared_preferences: ^2.0.0
   image_picker: ^0.8.4+9
-  syncfusion_flutter_datepicker: "20.4.44"
+  syncfusion_flutter_datepicker: ^20.4.44
   google_maps_flutter: ^2.2.1
 
 dev_dependencies:

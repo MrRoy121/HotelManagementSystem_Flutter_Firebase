@@ -299,15 +299,17 @@ class _SignUpScreenState extends State<SignUpScreen> {
         textColor: AppColors.creamColor,
         backgroundColor: Colors.red.shade200,
       );
-    } else if (RegExp(r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+")
-        .hasMatch(email)) {
-      SnackUtil.showSnackBar(
-        context: context,
-        text: "InValid Email Format.",
-        textColor: AppColors.creamColor,
-        backgroundColor: Colors.red.shade200,
-      );
-    } else {
+    }
+    // else if (RegExp(r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+")
+    //     .hasMatch(email)) {
+    //   SnackUtil.showSnackBar(
+    //     context: context,
+    //     text: "InValid Email Format.",
+    //     textColor: AppColors.creamColor,
+    //     backgroundColor: Colors.red.shade200,
+    //   );
+    // }
+    else {
       final prefs = await SharedPreferences.getInstance();
       await FirebaseAuth.instance
           .createUserWithEmailAndPassword(email: email, password: pass)

@@ -219,16 +219,18 @@ class _AdminLoginScreenState extends State<AdminLoginScreen> {
         textColor: AppColors.creamColor,
         backgroundColor: Colors.red.shade200,
       );
-    } else if (RegExp(
-        r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+")
-        .hasMatch(email)) {
-      SnackUtil.showSnackBar(
-        context: context,
-        text: "InValid Email Format.",
-        textColor: AppColors.creamColor,
-        backgroundColor: Colors.red.shade200,
-      );
-    } else {
+    }
+    // else if (RegExp(
+    //     r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+")
+    //     .hasMatch(email)) {
+    //   SnackUtil.showSnackBar(
+    //     context: context,
+    //     text: "InValid Email Format.",
+    //     textColor: AppColors.creamColor,
+    //     backgroundColor: Colors.red.shade200,
+    //   );
+    // }
+    else {
       final newUser = FirebaseAuth.instance
         ..signInWithEmailAndPassword(email: email, password: pass);
       String? user = newUser.currentUser?.uid;

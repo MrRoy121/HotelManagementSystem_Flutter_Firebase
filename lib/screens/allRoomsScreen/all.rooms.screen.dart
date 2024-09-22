@@ -98,43 +98,48 @@ class _AllRoomScreenState extends State<AllRoomScreen> {
                       ),
                     ),
                     DropdownButtonHideUnderline(
-                      child: DropdownButton2(
+                      child: DropdownButton2<String>(
                         customButton: Icon(
                           Icons.sort_sharp,
                           size: 35,
                           color: AppColors.creamColor,
                         ),
                         items: items
-                            .map((item) =>
-                            DropdownMenuItem<String>(
-                              value: item,
-                              child: Text(
-                                item,
-                                style: const TextStyle(
-                                  fontSize: 14,
-                                  color: Colors.white,
-                                ),
-                              ),
-                            ))
+                            .map((item) => DropdownMenuItem<String>(
+                          value: item,
+                          child: Text(
+                            item,
+                            style: const TextStyle(
+                              fontSize: 14,
+                              color: Colors.white,
+                            ),
+                          ),
+                        ))
                             .toList(),
                         value: selectedValue,
                         onChanged: (value) {
                           setState(() {
-                            selectedValue = value as String;
+                            selectedValue = value as String?;
                           });
                         },
-                        itemHeight: 48,
-                        itemPadding: const EdgeInsets.only(left: 16, right: 16),
-                        dropdownWidth: 160,
-                        dropdownPadding: const EdgeInsets.symmetric(vertical: 6),
-                        dropdownDecoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(4),
-                          color: AppColors.mirage,
+                        dropdownStyleData: DropdownStyleData(
+                          maxHeight: 200, // You can adjust the max height
+                          width: 160,
+                          padding: const EdgeInsets.symmetric(vertical: 6),
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(4),
+                            color: AppColors.mirage,
+                          ),
+                          elevation: 8,
+                          offset: const Offset(0, 8),
                         ),
-                        dropdownElevation: 8,
-                        offset: const Offset(0, 8),
+                        menuItemStyleData: const MenuItemStyleData(
+                          height: 48,
+                          padding: EdgeInsets.only(left: 16, right: 16),
+                        ),
                       ),
                     ),
+
                   ],
                 ),
               ),

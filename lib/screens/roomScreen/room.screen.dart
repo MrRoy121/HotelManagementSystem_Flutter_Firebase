@@ -431,7 +431,7 @@ class _RoomScreenState extends State<RoomScreen> {
                           );
                         },
                               style: ElevatedButton.styleFrom(
-                                primary: AppColors.yellowish,
+                                backgroundColor: AppColors.yellowish,
                               ),
                               child: const Text(
                                 "Check Out",
@@ -457,7 +457,7 @@ class _RoomScreenState extends State<RoomScreen> {
                           );
                         },
                               style: ElevatedButton.styleFrom(
-                                primary: AppColors.yellowish,
+                                backgroundColor: AppColors.yellowish,
                               ),
                               child: const Text(
                                 "Book Now",

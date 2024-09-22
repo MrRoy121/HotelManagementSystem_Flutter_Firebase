@@ -23,7 +23,7 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.mirage,
+      backgroundColor: AppColors.mirage,resizeToAvoidBottomInset: true,
       appBar: AppBar(
         backgroundColor: AppColors.mirage,
         elevation: 0,
@@ -79,7 +79,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       ),
                     ),
                     const SizedBox(
-                      height: 60,
+                      height: 30,
                     ),
                     Form(
                       child: Column(
@@ -87,7 +87,6 @@ class _LoginScreenState extends State<LoginScreen> {
                           Container(
                             padding:
                                 const EdgeInsets.symmetric(horizontal: 20.0),
-                            margin: const EdgeInsets.only(top: 10.0),
                             child: TextFormField(
                               controller: _conuserEmail,
                               style: TextStyle(color: AppColors.creamColor),
@@ -181,7 +180,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 ],
               ),
               const SizedBox(
-                height: 20,
+                height: 10,
               ),
               CustomButton.customBtnLogin(
                 buttonName: 'Sign In',
@@ -192,7 +191,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 textColor: AppColors.mirage,
               ),
               const SizedBox(
-                height: 20,
+                height: 10,
               ),
             ],
           ),
@@ -221,16 +220,18 @@ class _LoginScreenState extends State<LoginScreen> {
         textColor: AppColors.creamColor,
         backgroundColor: Colors.red.shade200,
       );
-    } else if (RegExp(
-            r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+")
-        .hasMatch(email)) {
-      SnackUtil.showSnackBar(
-        context: context,
-        text: "InValid Email Format.",
-        textColor: AppColors.creamColor,
-        backgroundColor: Colors.red.shade200,
-      );
-    } else {
+    }
+    // else if (RegExp(
+    //         r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+")
+    //     .hasMatch(email)) {
+    //   SnackUtil.showSnackBar(
+    //     context: context,
+    //     text: "InValid Email Format.",
+    //     textColor: AppColors.creamColor,
+    //     backgroundColor: Colors.red.shade200,
+    //   );
+    // }
+    else {
       final newUser = await FirebaseAuth.instance
         ..signInWithEmailAndPassword(email: email, password: pass);
       String? user = newUser.currentUser?.uid;
